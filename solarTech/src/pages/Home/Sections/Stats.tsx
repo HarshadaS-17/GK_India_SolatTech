@@ -1,47 +1,41 @@
-import Container from "../../../components/UI/Container";
+import StatCard from "./Stats/StatsCard";
+import statsData from "./Stats/statsData";
 
-const stats = [
-  {
-    value: "10,000+",
-    label: "Happy Customers",
-  },
-  {
-    value: "150 MW+",
-    label: "Solar Installed",
-  },
-  {
-    value: "₹100 Cr+",
-    label: "Electricity Bills Saved",
-  },
-  {
-    value: "25+",
-    label: "Cities Served",
-  },
-];
-
-const Stats = () => {
+function Stats() {
   return (
-    <section className="bg-white py-16">
-      <Container>
-        <div className="grid grid-cols-2 divide-x divide-y rounded-2xl border border-gray-200 bg-white shadow-lg md:grid-cols-4 md:divide-y-0">
-          {stats.map((stat) => (
-            <div
-              key={stat.label}
-              className="flex flex-col items-center justify-center p-8 text-center"
-            >
-              <h2 className="text-4xl font-extrabold text-blue-600 lg:text-5xl">
-                {stat.value}
-              </h2>
+    <section className="py-24">
+      <div className="mx-auto max-w-7xl px-6">
+        <h2 className="mb-16 text-center text-5xl font-bold">
+          Powering Homes Across India
+        </h2>
 
-              <p className="mt-3 text-sm font-medium text-gray-500">
-                {stat.label}
-              </p>
-            </div>
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          {statsData.map((item) => (
+            <StatCard key={item.id} {...item} />
           ))}
         </div>
-      </Container>
+
+        <div className="mt-10 flex flex-col items-center justify-between gap-6 rounded-3xl bg-sky-50 p-8 lg:flex-row">
+          <div className="flex items-center gap-5">
+            <img
+              src="https://img.icons8.com/color/96/india.png"
+              alt="India"
+              className="h-10 w-10"
+            />
+
+            <p className="text-2xl font-medium text-slate-900">
+              We are present in <strong>31 Cities</strong> across{" "}
+              <strong>10 States</strong>, and are growing every day.
+            </p>
+          </div>
+
+          <button className="rounded-xl bg-indigo-900 px-12 py-4 text-lg font-semibold text-white transition hover:bg-indigo-800">
+            Unlock Your Solar Savings
+          </button>
+        </div>
+      </div>
     </section>
   );
-};
+}
 
 export default Stats;

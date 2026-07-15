@@ -5,15 +5,16 @@ import Home from "../pages/Home/Home";
 // import Services from "../pages/Services/Services";
 // import Contact from "../pages/Contact/Contact";
 import NotFound from "../pages/NotFound/NotFound";
+import About from "../pages/About/About";
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
 
-      {/* <Route path="/about" element={<About />} />
+      <Route path="/about" element={<About />} />
 
-      <Route path="/services" element={<Services />} />
+      {/* <Route path="/services" element={<Services />} />
 
       <Route path="/contact" element={<Contact />} />
 

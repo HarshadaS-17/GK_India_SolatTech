@@ -4,7 +4,10 @@ import Trust from "./Sections/Trust";
 import Calculator from "./Sections/Calculator";
 import Comparison from "./Sections/comparision";
 import MonitoringApp from "./Sections/MonitoringApp";
-
+import TrueSection from "./Sections/TrustSection";
+import Faq from "./Sections/Faq";
+import GoodZeroBanner from "./Sections/GoodZero";
+import Blogs from "./Sections/Blogs";
 const Home = () => {
   return (
     <>
@@ -14,6 +17,10 @@ const Home = () => {
       <Comparison />
       <Calculator />
       <MonitoringApp />
+      <TrueSection />
+      <Faq />
+      <GoodZeroBanner />
+      <Blogs />
     </>
   );
 };
